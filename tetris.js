@@ -14,7 +14,7 @@ let board = new Array(20)
 let color_board = new Array(20)
 for (let i = 0; i < board.length; i++) {
     board[i] = new Array(10).fill(0)
-    color_board[i] = new Array(10).fill("black")
+    color_board[i] = new Array(10).fill("rgb(24, 0, 64)")
 }
 
 // make a function to draw rectangle
@@ -26,6 +26,23 @@ function drawBlock(x, y, color) {
     ctx.closePath();
 }
 
+function drawGrid() {
+    for (let i = 1; i < board.length; i++) {
+        ctx.beginPath();
+        ctx.rect(blockSize * i - 1, 0, 2, clientHeight);
+        ctx.fillStyle = "gray";
+        ctx.fill();
+        ctx.closePath();
+    }
+    for (let i = 1; i < 20; i++) {
+        ctx.beginPath();
+        ctx.rect(0, blockSize * i - 1, clientHeight / 2, 2);
+        ctx.fillStyle = "gray";
+        ctx.fill();
+        ctx.closePath();
+    }
+}
+
 function check_destroy_lines() {
     for (let y = 0; y < board.length; y++) {
         let count = 0;
@@ -34,8 +51,13 @@ function check_destroy_lines() {
         }
 
         if (count === 10) {
-            board[y] = new Array(10).fill(0);
-            color_board[y] = new Array(10).fill("black");
+            for (let i = y; i > 0; i--) {
+                board[i] = Array.from(board[i - 1]);
+                color_board[i] = Array.from(color_board[i- 1]);
+            }
+            console.log("yeay");
+            /*board[y] = new Array(10).fill(0);
+            color_board[y] = new Array(10).fill("black");*/
         }
     }
 }
@@ -189,6 +211,18 @@ class Tetromino {
     _rotate() {
         this.shape_rotation = (this.shape_rotation + 1) % this.shape.length;
     }
+
+    check_speed_fall() {
+        for (let y = this.position.y; y < board.length; y++) {
+            for (let i = 0; i < this.shape[this.shape_rotation].length; i++) {
+                const [dx, dy] = this.shape[this.shape_rotation][i];
+                if (board[this.position.y + dy + 1][this.position.x + dx] === 1) {
+                    return;
+                }
+            }
+            this.position.y += 1;
+        }
+    }
 }
 
 let new_tetromino = getNextTetrominos()
@@ -204,6 +238,7 @@ function update_canvas() {
             drawBlock(blockX, blockY, color_board[y][x]);
         }
     }
+    drawGrid()
     new_tetromino.draw();
     ctx.closePath();
 }
@@ -219,13 +254,15 @@ function loop() {
 setInterval(loop, 1);
 
 document.addEventListener("keydown", function(event) {
-    /*console.log(`key pressed code: ${event.code}`)
-    console.log(`key pressed key: ${event.key}`)*/
+    console.log(`key pressed code: ${event.code}`)
+    console.log(`key pressed key: ${event.key}`)
     if (event.code === "ArrowRight") {
         new_tetromino.check_move(1);
     } else if (event.code === "ArrowLeft") {
         new_tetromino.check_move(-1);
     } else if (event.code === "KeyC") {
         new_tetromino.check_rotation();
+    } else if (event.code === "ArrowDown") {
+        new_tetromino.check_speed_fall();
     }
 })
