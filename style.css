@@ -194,12 +194,95 @@ a:active {
     background-color: rgb(0, 90, 0);
 }
 
-
 .tetrominos {
     position: absolute;
     margin: 0;
     width: 300px;
     height: 200px;
+}
+
+/* projects.html file style */
+.projects_list {
+    margin-top: 180px;
+    text-align: center;
+}
+
+.projects_list_container {
+    background-color: rgb(40, 40, 40);
+    margin: 40px;
+
+    display: flex;
+    align-items: stretch;
+}
+.project {
+    background-color: rgb(60, 60, 60);
+    width: 400px;
+    padding: 30px;
+    margin: 10px;
+
+    border-radius: 30px;
+}
+.project:hover {
+    background-color: rgb(55, 55, 55);
+}
+
+.projects_informations {
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.tictactoe_informations {
+    padding: 20px;
+
+    display: flex;
+    align-items: stretch;
+}
+
+.tictactoe_informations_text {
+    background-color: rgb(50, 50, 50);
+    width: 800px;
+    padding: 20px;
+
+    border-radius: 25px;
+}
+.tictactoe_informations_img {
+    margin: 25px 50px;
+}
+
+.javascript_snake_informations {
+    padding: 20px;
+
+    display: flex;
+    align-items: stretch;
+}
+
+.javascript_snake_informations_text {
+    background-color: rgb(50, 50, 50);
+    width: 800px;
+    padding: 20px;
+
+    border-radius: 25px;
+}
+.javascript_snake_informations_img {
+    margin: 25px 50px;
+}
+
+.arduino_informations {
+    padding: 20px;
+
+    display: flex;
+    align-items: stretch;
+}
+
+.arduino_informations_text {
+    background-color: rgb(50, 50, 50);
+    width: 800px;
+    padding: 20px;
+
+    border-radius: 25px;
+}
+.arduino_informations_img {
+    margin: 25px 50px;
 }
 
 .footer {

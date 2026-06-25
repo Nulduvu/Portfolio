@@ -7,58 +7,99 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<section class="navigation_bar">
-    <a href="index.html">
-        <div class="nav_button" id="home_nav">
-            <p>Accueil</p>
-        </div>
-    </a>
+    <section class="navigation_bar">
+        <a href="index.html">
+            <div class="nav_button" id="home_nav">
+                <p>Accueil</p>
+            </div>
+        </a>
 
-    <a href="index.html#informations">
-        <div class="nav_button" id="informations_nav">
-            <p>Info</p>
-        </div>
-    </a>
+        <a href="index.html#informations">
+            <div class="nav_button" id="informations_nav">
+                <p>Info</p>
+            </div>
+        </a>
 
-    <a href="projects.html">
-        <div class="nav_button" id="projects_nav">
-            <p>Projects</p>
-        </div>
-    </a>
+        <a href="projects.html">
+            <div class="nav_button" id="projects_nav">
+                <p>Projects</p>
+            </div>
+        </a>
 
     <!--<a href="credits.html">
         <div class="nav_button" id="credits_nav">
             <p>Credits</p>
         </div>
     </a>-->
-</section>
+    </section>
 
-    <main>
-        <section>
-            <h2>À propos de moi</h2>
-            <p>Écris ici quelques phrases sur toi, tes passions et ce que tu aimes faire.</p>
-        </section>
-        <section>
-            <h2>Mes Passions</h2>
-            <ul>
-                <li> Description de passions 1.</li>
-                <li> Description de passions 2.</li>
-                <li> Description de passions 3.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Mes Projets</h2>
-            <ul>
-                <li><strong>Projet 1:</strong> Description de ton projet 1.</li>
-                <li><strong>Projet 2:</strong> Description de ton projet 2.</li>
-                <li><strong>Projet 3:</strong> Description de ton projet 3.</li>
-            </ul>
-        </section>
-        <button id="my_like_button" class="btn">❤ J'aime (0)</button>
-    </main>
-    <footer>
+    <section class="projects_list">
+        <h1><strong>Epitech Projects</strong></h1>
+        <p>here the projects I made during my internship</p>
+        <div class="projects_list_container">
+            <a href="#tictactoe_project">
+                <div class="project" id="tictactoe">
+                    <img src="assets/images/tictactoe.png" alt="tictactoe">
+                    <h2>Tic-tac-toe Game</h2>
+                    <p>a simple tic-tac-toe game with an algorithm to simulate an unbeatable AI</p>
+                </div>
+            </a>
+            <a href="#javascript_snake_project">
+                <div class="project" id="javascript_snake">
+                    <img src="assets/images/javascript_snake.png" alt="javascript_snake">
+                    <h2>Javascript Snake</h2>
+                    <p>a simple javascript snake game</p>
+                </div>
+            </a>
+            <a href="#simon_arduino_project">
+                <div class="project" id="simon_arduino">
+                    <img src="assets/images/arduino.png" alt="arduino">
+                    <h2>Simon Game</h2>
+                    <p>a try to make a Simon game in Arduino</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="projects_informations">
+        <div class="tictactoe_informations" id="tictactoe_project">
+            <div class="tictactoe_informations_text">
+                <h2>Tic-tac-toe Game</h2>
+                <p>it's a simple game of Tic-tac-toe made in Python with the library Pygame</p>
+            </div>
+            <div class="tictactoe_informations_img">
+                <img src="assets/images/tictactoe.png" alt="tictactoe">
+            </div>
+        </div>
+
+        <div class="javascript_snake_informations" id="javascript_snake_project">
+            <div class="javascript_snake_informations_text">
+                <h2>Javascript Snake</h2>
+                <p>a simple javascript snake game</p>
+            </div>
+            <div class="javascript_snake_informations_img">
+                <img src="assets/images/javascript_snake.png" alt="javascript_snake">
+            </div>
+        </div>
+
+        <div class="arduino_informations" id="simon_arduino_project">
+            <div class="arduino_informations_text">
+                <h2>Simon Game</h2>
+                <p>a simple javascript simon</p>
+            </div>
+            <div class="arduino_informations_img">
+                <img src="assets/images/arduino.png" alt="simon_arduino">
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
         <p>© 2026 - Eliot | Fait avec passion</p>
-    </footer>
-    <script src="eliot.js"></script>
+    </section>
+    <script>
+        window.onbeforeunload = function(){
+            window.scrollTo(0,0);
+        }
+    </script>
 </body>
 </html>
