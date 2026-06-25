@@ -3,27 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio - Accueil</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <h1> Bienvenue sur mon portfolio ! </h1>
-    </div>
+    <section class="navigation_bar">
+        <a href="index.html">
+            <div class="nav_button" id="home_nav">
+                <p>Accueil</p>
+            </div>
+        </a>
 
-    <div class="main_content">
-        <h2>À propos de moi</h2>
-        <p>Écris ici quelques phrases sur toi, tes passions et ce que tu aimes faire.</p>
+        <a href="#informations">
+            <div class="nav_button" id="informations_nav">
+                <p>Info</p>
+            </div>
+        </a>
 
-        <h2><a href="eliot.html">go to the portfolio</a></h2>
-    </div>
+        <a href="projects.html">
+            <div class="nav_button" id="projects_nav">
+                <p>Projects</p>
+            </div>
+        </a>
+
+        <!--<a href="credits.html">
+            <div class="nav_button" id="credits_nav">
+                <p>Credits</p>
+            </div>
+        </a>-->
+    </section>
+
+    <section class="hero">
+        <div class="hero_image">
+            <div class="hero_content">
+                <h1><strong>Welcome, i'm Eliot</strong></h1>
+                <div class="pins">
+                    <div class="python_pin">
+                        <img class="python_pic" src="assets/images/python.png" alt="">
+                        <p>python</p>
+                    </div>
+                    <div class="javascript_pin">
+                        <img class="javascript_pic" src="assets/images/javascript.png" alt="">
+                        <p>javascript</p>
+                    </div>
+                </div>
+                <p class="hero_subtitle">I like to make game. I like to use and discover different software <br> to make it like Unity, Ureal, roblox studio, or just using pure python</p>
+                <button class="hero_information_button" onclick="window.location.href='#informations'">discover more about me →</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="informations" id="informations">
+        <h1>About Me</h1>
+        <p>I'm a French student in 10th grade. I start to code when i was in 5th/6th grade, i like the feeling of creating something from nothing <br> to a full game or website.</p>
+    </section>
+
+    <section class="projects" id="projects">
+        <h1>Projects</h1>
+        <p>There is all the projects, or almost, i make during my internship at Epitech. <br> for see it, click on the button</p>
+        <button class="projects_button" onclick="window.location.href='projects.html'">discover the projects →</button>
+    </section>
 
     <a href="tetris.html">
-        <img src="assets/sprite/left_bottom_img.png" class="tetrominos">
+        <img alt="oww... i think the image do not load correctly" src="assets/images/tetrominos.png" class="tetrominos">
     </a>
 
-    <footer>
+    <section class="footer">
         <p>© 2026 - Eliot | Fait avec passion</p>
-    </footer>
+    </section>
+
+    <script>
+        window.onbeforeunload = function(){
+            window.scrollTo(0,0);
+        }
+    </script>
 </body>
 </html>
