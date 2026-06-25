@@ -197,6 +197,7 @@ a:active {
 .tetrominos {
     position: absolute;
     margin: 0;
+    padding-bottom: 27px;
     width: 300px;
     height: 200px;
 }
