@@ -217,7 +217,7 @@ a:active {
 .project {
     background-color: rgb(60, 60, 60);
     width: 400px;
-    padding: 30px;
+    padding: 30px 5px;
     margin: 10px;
 
     border-radius: 30px;
@@ -231,13 +231,13 @@ a:active {
     margin-left: 50px;
     margin-right: 50px;
 }
+
 .tictactoe_informations {
     padding: 20px;
 
     display: flex;
     align-items: stretch;
 }
-
 .tictactoe_informations_text {
     background-color: rgb(50, 50, 50);
     width: 800px;
@@ -255,7 +255,6 @@ a:active {
     display: flex;
     align-items: stretch;
 }
-
 .javascript_snake_informations_text {
     background-color: rgb(50, 50, 50);
     width: 800px;
@@ -273,7 +272,6 @@ a:active {
     display: flex;
     align-items: stretch;
 }
-
 .arduino_informations_text {
     background-color: rgb(50, 50, 50);
     width: 800px;

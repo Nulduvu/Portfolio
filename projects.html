@@ -10,7 +10,7 @@
     <section class="navigation_bar">
         <a href="index.html">
             <div class="nav_button" id="home_nav">
-                <p>Accueil</p>
+                <p>Home</p>
             </div>
         </a>
 
@@ -41,7 +41,7 @@
                 <div class="project" id="tictactoe">
                     <img src="assets/images/tictactoe.png" alt="tictactoe">
                     <h2>Tic-tac-toe Game</h2>
-                    <p>a simple tic-tac-toe game with an algorithm to simulate an unbeatable AI</p>
+                    <p>a simple tic-tac-toe game with <br> an algorithm to simulate an <br> unbeatable AI</p>
                 </div>
             </a>
             <a href="#javascript_snake_project">
@@ -65,7 +65,7 @@
         <div class="tictactoe_informations" id="tictactoe_project">
             <div class="tictactoe_informations_text">
                 <h2>Tic-tac-toe Game</h2>
-                <p>It's the famous game of Tic-tac-toe made in Python with the library Pygame</p>
+                <p>It's the famous game of Tic-tac-toe made in Python with the library Pygame. The game propose 2 dificulty, on where the AI do random move and another where the AI do calculated move powered by Minimax algorithm.</p>
             </div>
             <div class="tictactoe_informations_img">
                 <img src="assets/images/tictactoe.png" alt="tictactoe">
@@ -74,8 +74,9 @@
 
         <div class="javascript_snake_informations" id="javascript_snake_project">
             <div class="javascript_snake_informations_text">
-                <h2>Javascript Snake</h2>
-                <p>The snake game! Made in Javascript</p>
+                <h2>JavaScript Snake</h2>
+                <p>The snake game! Made in JavaScript using the HTML5 canvas API. Implemented core game logic like dynamic array manipulation and real time collision detection</p>
+                <a href="snake.html">click to play →</a>
             </div>
             <div class="javascript_snake_informations_img">
                 <img src="assets/images/javascript_snake.png" alt="javascript_snake">
@@ -85,7 +86,7 @@
         <div class="arduino_informations" id="simon_arduino_project">
             <div class="arduino_informations_text">
                 <h2>Simon Game</h2>
-                <p>Train your reflexes with this Simon game! Language used: Arduino</p>
+                <p>Train your memory with this Simon game! Language used: Arduino. We make the game with an arduino Uno card and a breadboard.</p>
             </div>
             <div class="arduino_informations_img">
                 <img src="assets/images/arduino.png" alt="simon_arduino">
@@ -99,6 +100,7 @@
     <script>
         window.onbeforeunload = function(){
             window.scrollTo(0,0);
+            document.body.style.zoom = "90%";
         }
     </script>
 </body>
