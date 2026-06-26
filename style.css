@@ -80,7 +80,7 @@ a:active {
 .hero_content {
     position: absolute;
     top: 50%;
-    left: 30%;
+    left: 400px;
     transform: translate(-50%, -50%);
 
     padding: 30px;
